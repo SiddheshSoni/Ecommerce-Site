@@ -1,0 +1,22 @@
+footer .footer-title{
+    text-align: center;
+    font-size: 50px;
+    width: 50%;
+}
+footer .footer-icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+}
+footer img{
+    max-width: 30px;
+    max-height: 30px;
+}
+footer ul{
+    list-style-type: none;
+    display: flex;
+    width: 20%;
+    height: 10%;
+}
+
