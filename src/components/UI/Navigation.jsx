@@ -15,9 +15,9 @@ const Navigation = (props) => {
         <Navbar className='navbar-dark bg-dark fixed-top' >
             <Container className="justify-content-center">
                 <Nav>
-                    <Nav.Link href="#">Home</Nav.Link>
-                    <Nav.Link active href="#">Store</Nav.Link>
-                    <Nav.Link href="#">About</Nav.Link>
+                    <Nav.Link href="/home">Home</Nav.Link>
+                    <Nav.Link active href="/">Store</Nav.Link>
+                    <Nav.Link href="/about">About</Nav.Link>
                 </Nav> 
             </Container>
             <Button className='d-flex gap-1' variant='info' onClick={props.onShowCart}>

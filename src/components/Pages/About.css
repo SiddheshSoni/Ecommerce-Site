@@ -1,0 +1,22 @@
+.about{
+    max-width: 900px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.about h1{
+    margin-bottom: 15px;
+}
+.about p{
+    text-align: left;
+    font-size: 17px;
+    margin: 20px;
+}
+.about img{
+    float: left;
+    margin: 20px 50px ;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}

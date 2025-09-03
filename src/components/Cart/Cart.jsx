@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import Table from 'react-bootstrap/Table';
 import "./Cart.css"
 import Button from 'react-bootstrap/esm/Button'
-import Modal from '../../Modal/Modal'
+import Modal from '../UI/Modal/Modal'
 import ItemContext from '../store/ItemContext';
 
 const Cart = (props) => {
