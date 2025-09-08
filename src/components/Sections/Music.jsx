@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button'
 import "./Music.css"
 import ItemContext from '../store/ItemContext';
+import Section from '../UI/Section';
 
 const Music = () => {
     const itemCtxt = useContext(ItemContext);
@@ -16,7 +17,7 @@ const Music = () => {
 
     const products= productsArr.map((item , index)=>{
         return(
-            <Col className="" key={index}>
+            <Col className='d-flex justify-content-center' key={index}>
             <Card className='border-0 text-center' style={{ "maxHeight":"", "maxWidth":"300px"}} key={index}>
                 <Card.Title>{item.title}</Card.Title>
                 <Card.Img variant='top' className="card-img-top"  style={{"maxWidth":"250px", "maxHeight":"250px", objectFit: "cover", margin: "0 auto"}} src={item.imageUrl} />
@@ -31,9 +32,9 @@ const Music = () => {
     });
 
     return (
-        <section className='d-flex justify-content-center container'>
+        <Section>
             <Row className="g-1" xs={1} md={2} >{products}</Row>
-        </section>
+        </Section>
     )
 }
 
