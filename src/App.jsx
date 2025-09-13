@@ -1,26 +1,30 @@
-import React,{useEffect, useState} from 'react'
+import React,{ useState} from 'react'
 import Navigation from './components/UI/Navigation'
 import "./App.css"
 import Music from './components/Sections/Music'
 import Footer from './components/UI/Footer'
 import Cart from './components/Cart/Cart'
 import ContextProvider from './components/store/ContextProvider'
-import {createBrowserRouter, RouterProvider, useLocation} from 'react-router-dom';
+import {createBrowserRouter, RouterProvider,} from 'react-router-dom';
 import About from './components/Pages/About'
 import HomePage from './components/Pages/HomePage'
 import { Button } from 'react-bootstrap'
+import ContactUs from './components/Pages/ContactUs'
 
 
 const router = createBrowserRouter([
   {path:"/", element:<Music/>},
   {path:"/about", element:<About/>},
-  {path:"/home", element:<HomePage/>}
+  {path:"/home", element:<HomePage/>},
+  {path:"/contact", element:<ContactUs/>}
 ]);
 
 function App() {
   const [showCart, setShowCart] = useState(false);
   return (
     <ContextProvider>
+      <div className="d-flex flex-column min-vh-100">
+
     <header>
       <Navigation onShowCart={() => setShowCart(true)} />
       {showCart && <Cart onClose={() => setShowCart(false)} />}
@@ -38,8 +42,9 @@ function App() {
     <RouterProvider router={router}/>
 
     <Footer/>
+        </div>
     </ContextProvider>
   )
 }
 
-export default App
+export default App;
