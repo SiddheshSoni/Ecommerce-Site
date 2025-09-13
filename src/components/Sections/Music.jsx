@@ -20,7 +20,7 @@ const Music = () => {
             <Col className='d-flex justify-content-center' key={index}>
             <Card className='border-0 text-center' style={{ "maxHeight":"", "maxWidth":"300px"}} key={index}>
                 <Card.Title>{item.title}</Card.Title>
-                <Card.Img variant='top' className="card-img-top"  style={{"maxWidth":"250px", "maxHeight":"250px", objectFit: "cover", margin: "0 auto"}} src={item.imageUrl} />
+                <Card.Img variant='top' className="card-img-top"  style={{"maxWidth":"250px", "maxHeight":"250px", objectFit: "cover", margin: "0 auto"}} src={item.title_image} />
                 <div className="d-flex justify-content-between align-items-center mt-3 px-2">
                     <Card.Text className='mb-0'>${item.price}</Card.Text>
                     <Button size="sm" onClick={()=>handleAddtoCart(item)} variant='info'>Add to Cart</Button>
